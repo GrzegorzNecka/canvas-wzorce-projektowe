@@ -35,8 +35,11 @@ export class ToolsUI {
     return btn;
   }
 
-  subscribe(subscriber) { //!obserwator
+  subscribe(subscriber) {
+    //!obserwator
     this.subscribers.push(subscriber);
+
+    console.log(subscriber);
   }
 }
 
@@ -48,10 +51,8 @@ export class ToolsUI {
  *      - subscriber - funkcje które nasłuchują na zmianęnarzędzi
  *      - btn.addEventListener("click", () => jeśli ktośkliknie
  *        na przycisk to toolsUI rozgłosi żę dany selektor został wybrany
- *      - ! toolsUI nie wie kto go nasłuchuje - dzieki temu mamy dobrą 
- *        separację logiki związanej z wyborem narzędzi od logiki związanej 
- *        z reagowaniem na taką zmianę 
+ *      - ! toolsUI nie wie kto go nasłuchuje - dzieki temu mamy dobrą
+ *        separację logiki związanej z wyborem narzędzi od logiki związanej
+ *        z reagowaniem na taką zmianę
  *
- * 
- * 
  */

@@ -18,19 +18,52 @@ tools.subscribe(selectedTool => {
 });
 
 /**
+ *
+ *
+ *   const factory = new ToolsFactory(); //tworzymy
  * 
- * 
- * -  const factory = new ToolsFactory(); //tworzymy 
  *    - obiekt produkujący narzędzia
+ *
+ *
  * 
- * -  const tools = new ToolsUI(".js-tools");
+ * 
+ *   const tools = new ToolsUI(".js-tools");
+ * 
  *    - obiekt który reprezentuje interfejs związny z pracą z narzędziami
+ *
  * 
- * -  const board = new DrawingBoardUI(".js-canvas", 500, 300);
- *    - przekazujemy mu kontener oraz rozmiary deski do rysowania 
  * 
- * -  const context = new DrawingContextUI(".js-context");
+ *
+ *   const board = new DrawingBoardUI(".js-canvas", 500, 300);
+ * 
+ *    - przekazujemy mu kontener oraz rozmiary deski do rysowania
+ *
+ * 
+ * 
+ *
+ *   const context = new DrawingContextUI(".js-context");
+ * 
  *    - wskazuje na elemnet w którym będzie informacja o wybranym narzędziu
+ *
+ * 
+ *
+ * 
+ *    tools.subscribe(selectedTool => {
+ *      const tool = factory.getTool(selectedTool);
+ *      board.changeTool(tool);
+ *     });
+ * 
+ *    - interfejs z narzędziałmi na które możemy subskrybować
+ *
  * 
  * 
+ *
+ *    tools.subscribe(selectedTool => {
+ *      context.updateContext(selectedTool);
+ *    });
+ *
+ *
+ *
+ *
+ *
  */

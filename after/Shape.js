@@ -18,3 +18,8 @@ export class Shape {
     );
   }
 }
+
+//strategia - wzorzec , dzęki któremu możemy w dynamiczny sposób wymieniać dane elementy na poszczególnych etapach życia aplikacji
+
+// - wzorzec strategia wymaga aby interfejs poszczególnych obiektów  - które są strategiami - był taki sam
+// shape mimo że nie reaguje na pewne zdarzenia to i tak posiada je

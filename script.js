@@ -27,6 +27,8 @@ tools.subscribe(selectedTool => {
 
 //powiadamiamy interfejs że narzędzie uległo zmianie
 
+//subskrybenttów może być więcej
+
 tools.subscribe(selectedTool => {
   context.updateContext(selectedTool);
 });

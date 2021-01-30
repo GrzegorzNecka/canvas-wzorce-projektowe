@@ -30,7 +30,7 @@ export class ToolsUI {
     btn.setAttribute("data-tool", selector);
     btn.textContent = name;
 
-    // po kliknieciu na button odpalana jest przekazana funkcja
+    // po kliknieciu na button odpalane sąwszystkie funkcje
     btn.addEventListener("click", () => {
       this.subscribers.forEach(s => s(selector));
     });

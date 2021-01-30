@@ -20,7 +20,7 @@ const context = new DrawingContextUI(".js-context");
 // tool  w fabryce produkujemy instancje narzędzia
 
 tools.subscribe(selectedTool => {
-  console.log(selectedTool);
+  // console.log("selectedTool", selectedTool);
   const tool = factory.getTool(selectedTool);
   board.changeTool(tool);
 });

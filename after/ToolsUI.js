@@ -3,7 +3,7 @@ export class ToolsUI {
     const root = this.createRoot();
     this.createButtons(root);
     this.attachToContainer(container, root);
-    this.subscribers = []; //!obserwator
+    this.subscribers = []; //!obserwator - przechowuje funkcje selectedTool z scripts.js
   }
 
   // stworzenia kontenera na przyciski
@@ -29,17 +29,26 @@ export class ToolsUI {
     const btn = document.createElement("button");
     btn.setAttribute("data-tool", selector);
     btn.textContent = name;
+
+    // po kliknieciu na button odpalana jest przekazana funkcja
     btn.addEventListener("click", () => {
-      this.subscribers.forEach(s => s(selector)); //!obserwator
+      this.subscribers.forEach(s => s(selector));
     });
     return btn;
   }
 
+  //!obserwator - dodanie do tablicy funkcji nasłuchujących z pliku script.js
   subscribe(subscriber) {
-    //!obserwator
+    /**
+     *
+       subscriper = (selectedTool => {
+             const tool = factory.getTool(selectedTool);
+            board.changeTool(tool);
+          })
+     * 
+     */
     this.subscribers.push(subscriber);
-
-    console.log(subscriber);
+    // console.log("subscribers", this.subscribers);
   }
 }
 
@@ -48,11 +57,11 @@ export class ToolsUI {
  *    tworzymy reprezentację  w interfejsie użytkownika
  *
  *    wzorzec obserwator
- *      - subscriber - funkcje które nasłuchują na zmianęnarzędzi
- *      - btn.addEventListener("click", () => jeśli ktośkliknie
- *        na przycisk to toolsUI rozgłosi żę dany selektor został wybrany
- *      - ! toolsUI nie wie kto go nasłuchuje - dzieki temu mamy dobrą
- *        separację logiki związanej z wyborem narzędzi od logiki związanej
- *        z reagowaniem na taką zmianę
+       - subscriber - funkcje które nasłuchują na zmianę narzędzi
+       - btn.addEventListener("click", () => jeśli ktośkliknie
+         na przycisk to toolsUI rozgłosi żę dany selektor został wybrany
+       - ! toolsUI nie wie kto go nasłuchuje - dzieki temu mamy dobrą
+         separację logiki związanej z wyborem narzędzi od logiki związanej
+         z reagowaniem na taką zmianę
  *
  */

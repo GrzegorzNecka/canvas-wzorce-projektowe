@@ -16,3 +16,21 @@ tools.subscribe(selectedTool => {
 tools.subscribe(selectedTool => {
   context.updateContext(selectedTool);
 });
+
+/**
+ * 
+ * 
+ * -  const factory = new ToolsFactory(); //tworzymy 
+ *    - obiekt produkujący narzędzia
+ * 
+ * -  const tools = new ToolsUI(".js-tools");
+ *    - obiekt który reprezentuje interfejs związny z pracą z narzędziami
+ * 
+ * -  const board = new DrawingBoardUI(".js-canvas", 500, 300);
+ *    - przekazujemy mu kontener oraz rozmiary deski do rysowania 
+ * 
+ * -  const context = new DrawingContextUI(".js-context");
+ *    - wskazuje na elemnet w którym będzie informacja o wybranym narzędziu
+ * 
+ * 
+ */

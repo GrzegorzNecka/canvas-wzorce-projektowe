@@ -22,3 +22,12 @@ export class ToolsFactory {
     }
 
 }
+
+
+/**
+ * 
+ * Fabryka - jeden z wzorców, który pomaga tworzyć obiekty w kontrolowany sposób
+ * 
+ * 
+ * 
+ */

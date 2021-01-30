@@ -54,6 +54,9 @@ tools.subscribe(selectedTool => {
  *     });
  * 
  *    - interfejs z narzędziałmi na które możemy subskrybować
+ *    - selectedTool - argument z wybrnaym narzędziem
+ *    - tool  w fabryce produkujemy instancje narzędzia 
+
  *
  * 
  * 
@@ -62,7 +65,7 @@ tools.subscribe(selectedTool => {
  *      context.updateContext(selectedTool);
  *    });
  *
- *
+ *    - powiadamiamy interfejs że narzędzie uległo zmianie 
  *
  *
  *
